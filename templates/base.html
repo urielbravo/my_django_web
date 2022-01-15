@@ -46,14 +46,30 @@
       }
     }
   </script>
+  <style type="text/tailwindcss">
+    .card {
+      @apply bg-gruvBg1 rounded overflow-hidden shadow-md shadow-gruvBg1 relative
+    }
+
+    .badge {
+      @apply bg-gruvBg1 text-xs font-bold rounded-full p-2 absolute top-0 ml-2 mt-2
+    }
+
+    .side-nav-link {
+      @apply block py-2.5 px-4 rounded transition duration-200 hover:bg-gruvBg3 hover:text-gruvFg0
+    }
+  </style>
 </head>
 
 <body class="text-gruvFg2">
   <div class="relative min-h-screen md:flex">
     <!-- mobile menu bar -->
-    <div class="bg-gruvBg1 text-gruvFg2 flex justify-between md:hidden">
+    <div class="bg-gruvBg1 flex justify-between md:hidden">
       <!-- logo -->
-      <a href="#" class="block p-4 text-gruvFg2 font-bold">A Dev's Lair</a>
+      <div class="flex items-center px-4">
+        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png" class="h-8 w-8" alt="Logo">
+        <span class="block p-4 font-bold">A Dev's Lair</span>
+      </div>
       <!-- mobile menu button -->
       <button id="mobile-menu-button" class="p-4 focus:outline-none focus:bg-gray-700">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,26 +80,22 @@
 
     <!-- sidebar -->
     <div id="sidebar"
-      class="bg-gruvBg1 text-gruvFg2 w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+      class="bg-gruvBg1 w-64 space-y-6 py-7 px-2 absolute z-10 inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
       <!-- logo -->
-      <a href="#" class="text-gruvFg2 flex items-center space-x-2 px-4">
-        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png" class="h-8 w-8"   id="rotate" alt="Logo">
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg> -->
+      <a href="#" class="flex items-center space-x-2 px-4">
+        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png" class="h-8 w-8" id="rotate" alt="Logo">
         <span class="text-2xl font-extrabold">A Dev's Lair</span>
       </a>
       <!-- nav -->
       <nav>
         <a href="{% url 'portfolio' %}"
-          class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gruvBg3 hover:text-gruvFg0">Home</a>
+          class="side-nav-link">Home</a>
         <a href="{% url 'blogs' %}"
-          class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gruvBg3 hover:text-gruvFg0">Blog</a>
+          class="side-nav-link">Blog</a>
         <a href="#"
-          class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gruvBg3 hover:text-gruvFg0">About Me</a>
+          class="side-nav-link">About Me</a>
         <a href="#"
-          class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gruvBg3 hover:text-gruvFg0">Pricing</a>
+          class="side-nav-link">Contact</a>
       </nav>
     </div>
 
