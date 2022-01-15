@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Profile -->
+    <div id="profile-pic" class="flex justify-center mb-5">
+        <img class="object-cover rounded-full h-52" src="{% static 'images/me_editado.jpg' %}" alt="">
+    </div>
+    <div id="mini-bio" class="flex justify-center text-xl">
+        <span>Hi, I'm Uriel Bravo and I'm a web developer, but over the last few years my career has been mainly in the QA Automation segment</span>
+    </div>
+{% endblock %}
