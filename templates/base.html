@@ -62,7 +62,7 @@
 </head>
 
 <body class="text-gruvFg2">
-  <div class="relative  md:flex">
+  <div class="relative min-h-screen md:flex">
     <!-- mobile menu bar -->
     <div class="bg-gruvBg1 flex justify-between md:hidden sticky top-0 z-10">
       <!-- logo -->
@@ -80,7 +80,7 @@
 
     <!-- sidebar -->
     <div id="sidebar"
-      class="bg-gruvBg1 w-64 space-y-6 py-7 px-2 absolute z-10 inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+      class="sticky min-h-screen bg-gruvBg1 w-64 space-y-6 py-7 px-2  z-10 inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
       <!-- logo -->
       <a href="#" class="flex items-center space-x-2 px-4">
         <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png" class="h-8 w-8" id="rotate" alt="Logo">
@@ -100,9 +100,9 @@
     </div>
 
     <!-- content -->
-    <main class="bg-gruvBgS p-10 flex-1">
+    <div class="bg-gruvBgS p-10 flex-1">
       {% block content %}{% endblock %}
-    </main>
+    </div>
   </div>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
