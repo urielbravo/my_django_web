@@ -62,12 +62,11 @@
 </head>
 
 <body class="text-gruvFg2">
-  <div class="relative min-h-screen md:flex">
+  <div class="relative min-h-screen">
     <!-- mobile menu bar -->
-    <div class="bg-gruvBg1 flex justify-between md:hidden">
+    <div class="bg-gruvBg1 flex justify-between md:hidden fixed left-0 right-0 z-10">
       <!-- logo -->
       <div class="flex items-center px-4">
-        <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png" class="h-8 w-8" alt="Logo">
         <span class="block p-4 font-bold">A Dev's Lair</span>
       </div>
       <!-- mobile menu button -->
@@ -80,7 +79,8 @@
 
     <!-- sidebar -->
     <div id="sidebar"
-      class="bg-gruvBg1 w-64 space-y-6 py-7 px-2 absolute z-10 inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+      class="bg-gruvBg1 overflow-y-auto w-64 space-y-6 py-7 px-2 
+            transform -translate-x-full fixed top-0 bottom-0 left-0 md:translate-x-0 transition duration-200 ease-in-out z-10">
       <!-- logo -->
       <a href="#" class="flex items-center space-x-2 px-4">
         <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/267_Python_logo-256.png" class="h-8 w-8" id="rotate" alt="Logo">
@@ -99,10 +99,13 @@
       </nav>
     </div>
 
+    <!-- container -->
+    <div class="absolute top-12 bottom-0 left-0 md:left-64 md:top-0 right-0">
     <!-- content -->
     <main class="bg-gruvBgS p-10 flex-1">
       {% block content %}{% endblock %}
     </main>
+    </div>
   </div>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
