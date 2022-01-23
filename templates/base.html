@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'images/code-slash.svg' %}" type="image/x-icon">
   <title>Uriel Bravo's Lair</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +65,7 @@
 <body class="text-gruvFg2">
   <div class="relative min-h-screen">
     <!-- mobile menu bar -->
-    <div class="bg-gruvBg1 flex justify-between md:hidden fixed left-0 right-0 z-10">
+    <div class="bg-gruvBgS flex justify-between md:hidden fixed left-0 right-0 z-10">
       <!-- logo -->
       <div class="flex items-center px-4">
         <span class="block p-4 font-bold">A Dev's Lair</span>
@@ -79,7 +80,7 @@
 
     <!-- sidebar -->
     <div id="sidebar"
-      class="bg-gruvBg1 overflow-y-auto w-64 space-y-6 py-7 px-2 
+      class="bg-gruvBgS overflow-y-auto w-64 space-y-6 py-7 px-2 
             transform -translate-x-full fixed top-0 bottom-0 left-0 md:translate-x-0 transition duration-200 ease-in-out z-10">
       <!-- logo -->
       <a href="#" class="flex items-center space-x-2 px-4">
@@ -102,7 +103,7 @@
     <!-- container -->
     <div class="absolute top-12 bottom-0 left-0 md:left-64 md:top-0 right-0">
     <!-- content -->
-    <main class="bg-gruvBgS p-10 flex-1">
+    <main class="bg-gruvBg p-10 flex-1">
       {% block content %}{% endblock %}
     </main>
     </div>

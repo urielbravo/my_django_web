@@ -4,9 +4,79 @@
 {% block content %}
     <!-- Profile -->
     <div id="profile-pic" class="flex justify-center mb-5">
-        <img class="object-cover rounded-full h-52" src="{% static 'images/me_editado.jpg' %}" alt="">
+        <img class="object-cover rounded-full h-52" src="{% static 'images/me_editado.jpg' %}" alt="profile-pic">
     </div>
-    <div id="mini-bio" class="flex justify-center text-xl">
+    <div id="bio" class="flex justify-center text-xl text-center">
         <span>Hi, I'm Uriel Bravo and I'm a web developer, but over the last few years my career has been mainly in the QA Automation segment</span>
+    </div>
+    <div id="links" class="flex justify-center mt-5 space-x-5">
+        <a href="https://github.com/urielbravo">
+            <img class="h-12" src="{% static 'images/github.svg' %}" alt="github">
+        </a>
+        <a href="https://www.linkedin.com/in/urielbravo/">
+            <img class="h-12" src="{% static 'images/linkedin.svg' %}" alt="github">
+        </a>
+        <a href="{% static 'images/resume.pdf' %}">
+            <img class="h-12" src="{% static 'images/resume.svg' %}" alt="resume">
+        </a>
+    </div>
+    <!-- card component right -->
+    <div class="flex justify-center items-center py-12">
+        <!-- card goes here -->
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl w-3/4">
+            <div class="flex flex-col lg:flex-row w-full">
+                <!-- image -->
+                <img class="rounded-t-lg object-cover lg:w-1/3 w-full" src="https://images.unsplash.com/photo-1596543570665-a34c7aeb1da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+                <!-- body -->
+                <div class="p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold">The blog</h2>
+                    <p>
+                        This is a portfolio I made using python, django, and tailwind css for the styling, since I'm not the best designer
+                        I figured I could use something like tailwind, also i always wanted to tried it.
+                    </p>
+                    <p>
+                        This site has a home, and about page and a contact page, all of them are static pages, the blog hoewer, is a full
+                        dynamic page, I have a dashboard where I can create, edit and delete the posts, plus you can see the list of posts
+                        and any individual post you select, each post also has a category, with it's icon and the usual stuff. You can also
+                        filter the posts by category (although usually they are filter by date).
+                    </p>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex lg:justify-end justify-center">
+                <span>
+                    Repo: <a href="https://github.com/urielbravo/my_django_web">repository</a>
+                </span>
+            </footer>
+        </div>
+    </div>
+
+    <!-- card component left -->
+    <div class="flex justify-center items-center">
+        <!-- card goes here -->
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl w-3/4">
+            <div class="flex justify-end flex-col-reverse lg:flex-row w-full">
+                <!-- body -->
+                <div class="p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold">Dentist Dashboard</h2>
+                    <p>
+                        This is a dashboard I created with Python, Django and Bootstrap.
+                        It is for a dentist office, and it's function is to keep a record of the patients.
+                    </p>
+                    <p>
+                        There is a form that the patient has to fill, and that's about it for the patient,
+                        but for the dentist there is a list of the patients, the detail of the patients
+                        and several studies he/she can create, the dentist can also do anotations and keep
+                        a record of the payments of the patient
+                    </p>
+                </div>
+                <!-- image -->
+                <img class="rounded-t-lg object-cover lg:w-1/3 w-full" src="https://images.unsplash.com/photo-1596543570665-a34c7aeb1da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+            </div>
+            <!-- footer -->
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex lg:justify-start justify-center">
+                <span>Repo: Private</span><img class="h-6 ml-2" src="{% static 'images/emoji-dizzy.svg' %}" alt="">
+            </footer>
+        </div>
     </div>
 {% endblock %}
