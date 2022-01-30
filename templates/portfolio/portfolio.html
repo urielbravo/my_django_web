@@ -2,31 +2,38 @@
 {% load static %}
 
 {% block content %}
+
     <!-- Profile -->
     <div id="profile-pic" class="flex justify-center mb-5">
-        <img class="object-cover rounded-full h-52" src="{% static 'images/me_editado.jpg' %}" alt="profile-pic">
+        <img class="object-cover rounded-full h-52" src="{% static 'images/profile.jpg' %}" alt="profile-pic">
     </div>
     <div id="bio" class="flex justify-center text-xl text-center">
         <span>Hi, I'm Uriel Bravo and I'm a web developer, but over the last few years my career has been mainly in the QA Automation segment</span>
     </div>
+
+    <!-- links -->
     <div id="links" class="flex justify-center mt-5 space-x-5">
         <a href="https://github.com/urielbravo">
-            <img class="h-12" src="{% static 'images/github.svg' %}" alt="github">
+            <img class="h-12" src="{% static 'images/icons/github.svg' %}" alt="github">
         </a>
         <a href="https://www.linkedin.com/in/urielbravo/">
-            <img class="h-12" src="{% static 'images/linkedin.svg' %}" alt="github">
+            <img class="h-12" src="{% static 'images/icons/linkedin.svg' %}" alt="github">
         </a>
         <a href="{% static 'images/resume.pdf' %}">
-            <img class="h-12" src="{% static 'images/resume.svg' %}" alt="resume">
+            <img class="h-12" src="{% static 'images/icons/resume.svg' %}" alt="resume">
         </a>
     </div>
+
+    <!-- Relevant experience title -->
+    <h4 class="font-bold mt-12 pb-2 border-b border-gruvFg2">Relevant experience:</h4>
+
     <!-- card component right -->
-    <div class="flex justify-center items-center py-12">
+    <div class="flex justify-center items-center py-6 mt-6">
         <!-- card goes here -->
-        <div class="bg-gruvBg2 rounded-lg shadow-2xl w-3/4">
-            <div class="flex flex-col lg:flex-row w-full">
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl xl:w-3/4 w-full">
+            <div class="flex flex-col xl:flex-row w-full">
                 <!-- image -->
-                <img class="rounded-t-lg object-cover lg:w-1/3 w-full" src="https://images.unsplash.com/photo-1596543570665-a34c7aeb1da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+                <img class="rounded-t-lg object-cover xl:w-1/2 w-full" src="static/images/portfolio/blog.png" alt="">
                 <!-- body -->
                 <div class="p-8 space-y-5">
                     <h2 class="text-xl font-extrabold">The blog</h2>
@@ -38,44 +45,128 @@
                         This site has a home, and about page and a contact page, all of them are static pages, the blog hoewer, is a full
                         dynamic page, I have a dashboard where I can create, edit and delete the posts, plus you can see the list of posts
                         and any individual post you select, each post also has a category, with it's icon and the usual stuff. You can also
-                        filter the posts by category (although usually they are filter by date).
+                        filter the posts by category (although they are filter by date by default).
                     </p>
                 </div>
             </div>
             <!-- footer -->
-            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex lg:justify-end justify-center">
-                <span>
-                    Repo: <a href="https://github.com/urielbravo/my_django_web">repository</a>
-                </span>
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex xl:justify-end justify-center">
+                <span>Repo:</span><a href="https://github.com/urielbravo/my_django_web"><img class="h-6 ml-2" src="{% static 'images/icons/git.svg' %}" alt=""></a>
             </footer>
         </div>
     </div>
 
     <!-- card component left -->
-    <div class="flex justify-center items-center">
+    <div class="flex justify-center items-center py-6">
         <!-- card goes here -->
-        <div class="bg-gruvBg2 rounded-lg shadow-2xl w-3/4">
-            <div class="flex justify-end flex-col-reverse lg:flex-row w-full">
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl xl:w-3/4 w-full">
+            <div class="flex justify-end flex-col-reverse xl:flex-row w-full">
                 <!-- body -->
                 <div class="p-8 space-y-5">
-                    <h2 class="text-xl font-extrabold">Dentist Dashboard</h2>
+                    <h2 class="text-xl font-extrabold">Medical Records</h2>
                     <p>
                         This is a dashboard I created with Python, Django and Bootstrap.
                         It is for a dentist office, and it's function is to keep a record of the patients.
                     </p>
                     <p>
                         There is a form that the patient has to fill, and that's about it for the patient,
-                        but for the dentist there is a list of the patients, the detail of the patients
+                        for the dentist, there is a list of the patients, the detail of the patients
                         and several studies he/she can create, the dentist can also do anotations and keep
                         a record of the payments of the patient
                     </p>
+                    <p>
+                        (more details in the repo)
+                    </p>
                 </div>
                 <!-- image -->
-                <img class="rounded-t-lg object-cover lg:w-1/3 w-full" src="https://images.unsplash.com/photo-1596543570665-a34c7aeb1da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+                <img class="rounded-t-lg object-cover xl:w-1/2 w-full" src="{% static 'images/portfolio/medical.png' %}" alt="">
             </div>
             <!-- footer -->
-            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex lg:justify-start justify-center">
-                <span>Repo: Private</span><img class="h-6 ml-2" src="{% static 'images/emoji-dizzy.svg' %}" alt="">
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex xl:justify-start justify-center">
+                <span>Repo:</span><a href="https://github.com/urielbravo/medical_records"><img class="h-6 ml-2" src="{% static 'images/icons/git.svg' %}" alt=""></a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- card component right -->
+    <div class="flex justify-center items-center py-6">
+        <!-- card goes here -->
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl xl:w-3/4 w-full">
+            <div class="flex flex-col xl:flex-row w-full">
+                <!-- image -->
+                <img class="rounded-t-lg xl:object-cover xl:w-1/2 w-full h-96" src="{% static 'images/portfolio/amiga.webp' %}" alt="">
+                <!-- body -->
+                <div class="p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold">Revista Amiga</h2>
+                    <p>
+                        This is an android/ios app, the mobile app was made with ionic, the backend with django and
+                        django rest framework was used to create the rest API
+                    </p>
+                    <p>
+                        This app it's like a mobile magazine, where you can read articles and tips, you can also
+                        search them by categorie. We have promotions that businesses can create to promote themselves
+                        and we send a notifications to the app users with every promotion.
+                    </p>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex xl:justify-end justify-center">
+                <span>Playstore:</span><a href="https://play.google.com/store/apps/details?id=com.inpoint.revistabs1"><img class="h-6 ml-2" src="{% static 'images/icons/google-play.svg' %}" alt=""></a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- card component left -->
+    <div class="flex justify-center items-center py-6">
+        <!-- card goes here -->
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl xl:w-3/4 w-full">
+            <div class="flex justify-end flex-col-reverse xl:flex-row w-full">
+                <!-- body -->
+                <div class="p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold">Revista BS</h2>
+                    <p>
+                        This is an android/ios app, the mobile app was made with React Native, the backend with django and
+                        django rest framework was used to create the rest API
+                    </p>
+                    <p>
+                        This app it's like a medical mobile magazine, where you can read articles and tips, you can also
+                        search them by categorie. You can also search for doctors in your area look for them by categorie, doctors can also promote themselves
+                        and the users of the app will get a notification every new promotion or announcement. 
+                    </p>
+                </div>
+                <!-- image -->
+                <img class="rounded-t-lg xl:object-cover xl:w-1/2 w-full h-96" src="{% static 'images/portfolio/bs_revista.webp' %}" alt="">
+            </div>
+            <!-- footer -->
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex xl:justify-start justify-center">
+                <span>Playstore:</span><a href="https://play.google.com/store/apps/details?id=com.inpoint.buenasalud2"><img class="h-6 ml-2" src="{% static 'images/icons/google-play.svg' %}" alt=""></a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- card component right -->
+    <div class="flex justify-center items-center py-6">
+        <!-- card goes here -->
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl xl:w-3/4 w-full">
+            <div class="flex flex-col xl:flex-row w-full">
+                <!-- image -->
+                <img class="rounded-t-lg xl:object-cover xl:w-1/2 w-full h-96" src="{% static 'images/portfolio/ubigas.jpg' %}" alt="">
+                <!-- body -->
+                <div class="p-8 space-y-5">
+                    <h2 class="text-xl font-extrabold">Ubigas</h2>
+                    <p>
+                        This is an android/ios app, the mobile app was made with React Native, the backend with django and
+                        django rest framework was used to create the rest API.
+                    </p>
+                    <p>
+                        In this app you have a map of your area (within a 20km range) of all the gas stations available and their prices,
+                        you could also go to a list of all the stations and filter them by gas price.
+                    </p>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex xl:justify-end justify-center">
+                <span>Playstore: Not available anymore</span><img class="h-6 ml-2" src="{% static 'images/icons/emoji-dizzy.svg' %}" alt="">
             </footer>
         </div>
     </div>
