@@ -14,7 +14,7 @@ btn.addEventListener('click', () => {
 
 
 /* 
-    This is the rotation of the pytho icon
+    This is the rotation of the python icon
 */
 
 let looper
@@ -32,3 +32,32 @@ function rotateAnimation(el,speed){
 }
 
 rotateAnimation('rotate', 10)
+
+// carousel functionality
+
+const imgs = document.getElementById('image-container')
+const imgList = document.querySelectorAll('#image-container img')
+let idx = 0
+
+changeImg = () => {
+	if (idx > imgList.length - 1) {
+		imgs.classList.remove('-translate-x-200')
+		idx = 0
+	} else if (idx === 1) {
+		imgs.classList.remove('-translate-x-200')
+		imgs.classList.add('-translate-x-full')
+	} else if (idx === 2) {
+		imgs.classList.remove('-translate-x-full')
+		imgs.classList.add('-translate-x-200')
+	} else if (idx === 0) {
+		
+		imgs.classList.add('-translate-x-0')
+	}
+}
+
+run = () => {
+	idx++
+	changeImg()
+}
+
+let interval = setInterval(run, 3000)

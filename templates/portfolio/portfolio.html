@@ -23,12 +23,18 @@
     <!-- card component right -->
     <div class="flex justify-center items-center py-12">
         <!-- card goes here -->
-        <div class="bg-gruvBg2 rounded-lg shadow-2xl w-3/4">
-            <div class="flex flex-col lg:flex-row w-full">
-                <!-- image -->
-                <img class="rounded-t-lg object-cover lg:w-1/3 w-full" src="https://images.unsplash.com/photo-1596543570665-a34c7aeb1da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl shadow-gruvBg1 w-3/4">
+            <div class="flex flex-col 2xl:flex-row w-full">
+                <!-- carousel -->
+                <div class="carousel overflow-hidden relative basis-1/2">
+                    <div id="image-container" class="flex transition duration-500 ease-in-out h-full">
+                        <img id="carousel-img" src="{% static 'images/projects/portfolio/portfolio_2.png' %}" alt="" class="object-cover rounded-t-lg object-cover w-full">
+                        <img id="carousel-img" src="{% static 'images/projects/portfolio/portfolio_1.png' %}" alt="" class="object-cover rounded-t-lg object-cover w-full">
+                        <img id="carousel-img" src="{% static 'images/projects/portfolio/portfolio_3.png' %}" alt="" class="object-cover rounded-t-lg object-cover w-full">
+                    </div>
+                </div>
                 <!-- body -->
-                <div class="p-8 space-y-5">
+                <div class="p-8 space-y-5 basis-1/2">
                     <h2 class="text-xl font-extrabold">The blog</h2>
                     <p>
                         This is a portfolio I made using python, django, and tailwind css for the styling, since I'm not the best designer
@@ -54,10 +60,10 @@
     <!-- card component left -->
     <div class="flex justify-center items-center">
         <!-- card goes here -->
-        <div class="bg-gruvBg2 rounded-lg shadow-2xl w-3/4">
-            <div class="flex justify-end flex-col-reverse lg:flex-row w-full">
+        <div class="bg-gruvBg2 rounded-lg shadow-2xl shadow-gruvBg1 w-3/4">
+            <div class="flex justify-end flex-col-reverse 2xl:flex-row w-full">
                 <!-- body -->
-                <div class="p-8 space-y-5">
+                <div class="p-8 space-y-5 basis-1/2">
                     <h2 class="text-xl font-extrabold">Dentist Dashboard</h2>
                     <p>
                         This is a dashboard I created with Python, Django and Bootstrap.
@@ -70,8 +76,14 @@
                         a record of the payments of the patient
                     </p>
                 </div>
-                <!-- image -->
-                <img class="rounded-t-lg object-cover lg:w-1/3 w-full" src="https://images.unsplash.com/photo-1596543570665-a34c7aeb1da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+                <!-- carousel -->
+                <div class="carousel overflow-hidden relative basis-1/2">
+                    <div id="image-container" class="flex transition duration-500 ease-in-out h-full">
+                        <img id="carousel-img" src="{% static 'images/projects/dentist_admin/dentist_1.png' %}" alt="" class="object-cover rounded-t-lg object-cover w-full">
+                        <img id="carousel-img" src="{% static 'images/projects/dentist_admin/dentist_2.png' %}" alt="" class="object-cover rounded-t-lg object-cover w-full">
+                        <img id="carousel-img" src="{% static 'images/projects/dentist_admin/dentist_3.png' %}" alt="" class="object-cover rounded-t-lg object-cover w-full">
+                    </div>
+                </div>
             </div>
             <!-- footer -->
             <footer class="bg-gruvBg3 rounded-b-lg py-3 px-8 flex lg:justify-start justify-center">
