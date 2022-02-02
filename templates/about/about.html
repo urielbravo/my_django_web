@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Profile -->
+<div id="profile-pic" class="flex justify-center mb-5">
+    <img class="object-cover rounded-full h-52" src="{% static 'images/profile.jpg' %}" alt="profile-pic">
+</div>
+<div id="bio" class="flex justify-center text-xl text-center">
+    <span>Hi!, I'm Uriel, I studied Electronics Engineering, some years ago i started to get interested in web
+        development and I've been doing that since</span>
+</div>
+
+<!-- My dog kito -->
+<h4 class="font-bold mt-12 pb-2 border-b border-gruvFg2">My friend</h4>
+<div id="kito" class="justify-center text-xl text-center mt-6">
+    <span class="block">I have a Dog, his name is Kito (is pronounced like the capital of Ecuador which I guess would be
+        something lik 'Ketoh'), He is a good mate.</span>
+    <span>Here is a picture of Him which was taken around christmas:</span>
+</div>
+<div id="profile-pic" class="flex justify-center mb-5 mt-10">
+    <img class="object-cover rounded-xl h-96" src="{% static 'images/kito_christmas.jpeg' %}" alt="profile-pic">
+</div>
+<div id="kito" class="justify-center text-xl text-center mt-6">
+    <span class="block">Here is another one after our running session, he was a little bit tired.</span>
+</div>
+<div id="profile-pic" class="flex justify-center mb-5 mt-10">
+    <img class="object-cover rounded-xl h-96" src="{% static 'images/kit_tired.jpg' %}" alt="profile-pic">
+</div>
+
+<!-- Hobies -->
+<h4 class="font-bold mt-12 pb-2 border-b border-gruvFg2">Hobbies and Interests</h4>
+<div id="bio" class="flex justify-center text-xl mt-10">
+    <ul class="list-disc">
+        <li>Play football (soccer for the people in the Unite States)</li>
+        <li class="mt-5">I Also have a Youtube channel in which I narrate Horror tales (It's in Spanish)
+            <ul class="list-disc ml-5">
+                <li>Here is the Link to it: <a href="https://www.youtube.com/channel/UC9wcNS5jWjdg2B6CsHndpJw"><img
+                            class="w-11"
+                            src="{% static 'images/icons/youtube.svg' %}" alt="Channel"></a></li>
+            </ul>
+        </li>
+        <li class="mt-5">I also like to go swimming</li>
+        <li class="mt-5">Play videogames, mostly horror games (Silent Hill 2 is my favorite)</li>
+        <li class="mt-5">Favorite foods (no order)
+            <ul class="list-disc ml-5">
+                <li>Pizza</li>
+                <li>Tacos</li>
+                <li>Hot Dogs</li>
+            </ul>
+        </li>
+        <li class="mt-5">I also enjoy working on my personal projects (most of them leave them halfway through)</li>
+    </ul>
+</div>
+{% endblock %}
